@@ -1,0 +1,17 @@
+# 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:13306/zentao?useUnicode=true&characterEncoding=utf-8
+    username: jayang
+    password: jayang880706
+security:
+  ignoring: "/static/**/*, /druid/**/**, /login.ftl,/login.ftl1, /webjars/**/*, /images/**/*,/oauth/token,/oauth/authorize" 
+  intercept: "/**/*.jsp, /**/*.html, /**/*.ftl"
+  successUrl: "/index.ftl"
+  logoutSuccessUrl: "/login.ftl"
+  user:
+    name: root
+    password: 1234
+server:
+  port: 8083
