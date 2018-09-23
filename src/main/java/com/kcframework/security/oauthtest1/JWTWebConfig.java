@@ -18,18 +18,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
 /**
  *
- * @author Jayang
+ * @author jayan
  */
-///@Configuration
-public class DBWebConfigConfig extends WebSecurityConfigurerAdapter {
+@Configuration
+public class JWTWebConfig extends WebSecurityConfigurerAdapter {
 
     String[] paths = null;
     @Autowired
@@ -56,7 +51,7 @@ public class DBWebConfigConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .permitAll().and();
+                .permitAll();
     }
 
     @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
