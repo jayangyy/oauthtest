@@ -13,5 +13,23 @@ security:
   user:
     name: root
     password: 1234
+  oauth2:
+    client:
+      clientId: resource1
+      clientSecret: secret
+      userAuthorizationUri: http://localhost:8083/oauth/authorize
+      grant-type: authorization_code
+      scope: app
+      access-token-uri: http://localhost:8083/oauth/token
+    resource:
+      userInfoUri: http://localhost:8083/oauthhello
+      filter-order: 3
+    authorization:
+      check-token-access: http://localhost:8083/oauth/check_token
+  basic:
+    enabled: true
+management:
+  security:
+    enable: true
 server:
   port: 8083

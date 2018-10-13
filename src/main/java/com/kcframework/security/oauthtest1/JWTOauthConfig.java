@@ -23,7 +23,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 /**
  *
- * @author jayan
+ * @author jayan JWTTOKEN
  */
 @Configuration
 @EnableAuthorizationServer
