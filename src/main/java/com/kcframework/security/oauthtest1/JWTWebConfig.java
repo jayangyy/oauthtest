@@ -15,9 +15,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
  *
@@ -58,6 +61,16 @@ public class JWTWebConfig extends WebSecurityConfigurerAdapter {
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+    //配置内存模式的用户
+
+    @Bean
+    @Override
+    protected UserDetailsService userDetailsService() {
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("demoUser1").password(new BCryptPasswordEncoder().encode("123456")).authorities("USER").build());
+        manager.createUser(User.withUsername("demoUser2").password(new BCryptPasswordEncoder().encode("123456")).authorities("USER").build());
+        return manager;
     }
 
     @Override

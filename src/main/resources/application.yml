@@ -18,7 +18,7 @@ security:
       clientId: resource1
       clientSecret: secret
       userAuthorizationUri: http://localhost:8083/oauth/authorize
-      grant-type: authorization_code
+#     // grant-type: password
       scope: app
       access-token-uri: http://localhost:8083/oauth/token
     resource:
