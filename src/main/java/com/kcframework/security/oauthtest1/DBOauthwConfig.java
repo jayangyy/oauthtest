@@ -72,7 +72,7 @@ public class DBOauthwConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         //        //添加客户端信息
-        clients.withClientDetails(clientDetails());//
+        clients.withClientDetails(clientDetails()) ;//
 
     }
 
