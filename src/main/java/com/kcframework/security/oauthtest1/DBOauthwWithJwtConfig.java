@@ -40,7 +40,7 @@ public class DBOauthwWithJwtConfig extends AuthorizationServerConfigurerAdapter 
 
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
-    @Autowired
+      @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
     private DataSource dataSource;
