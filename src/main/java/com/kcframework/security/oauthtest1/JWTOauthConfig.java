@@ -27,8 +27,8 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
  *
  * @author jayan JWTTOKEN
  */
-@Configuration
-@EnableAuthorizationServer
+//@Configuration
+//@EnableAuthorizationServer
 public class JWTOauthConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired

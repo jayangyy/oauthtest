@@ -28,7 +28,7 @@ import org.springframework.web.filter.CorsFilter;
  *
  * @author Jayang
  */
-///@Configuration
+@Configuration
 public class DBWebConfigConfig extends WebSecurityConfigurerAdapter {
 
     String[] paths = null;

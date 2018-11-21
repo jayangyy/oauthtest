@@ -26,7 +26,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
  *
  * @author jayan
  */
-@Configuration
+//@Configuration
 public class JWTWebConfig extends WebSecurityConfigurerAdapter {
 
     String[] paths = null;
