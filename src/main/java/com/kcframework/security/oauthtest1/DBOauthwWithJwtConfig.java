@@ -34,8 +34,8 @@ import org.springframework.web.filter.CorsFilter;
  *
  * @author Jayang
  */
-@Configuration
-@EnableAuthorizationServer
+//@Configuration
+//@EnableAuthorizationServer
 public class DBOauthwWithJwtConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
